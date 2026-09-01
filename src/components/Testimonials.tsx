@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import SectorWall from './SectorWall';
 import { TESTIMONIAL_INTERVAL_MS, contact, testimonials } from '../content';
 import { reveal } from '../hooks/useReveal';
 
@@ -40,9 +41,14 @@ export default function Testimonials() {
         </div>
       </div>
 
-      <div className="quotes__body" {...reveal(1)}>
-        <p className="quote">“{current.quote}”</p>
-        <div className="quote__author">{current.author}</div>
+      <div className="quotes__grid">
+        <div className="quotes__body" {...reveal(1)}>
+          <p className="quote">“{current.quote}”</p>
+          <div className="quote__author">{current.author}</div>
+        </div>
+        <div {...reveal(2)}>
+          <SectorWall />
+        </div>
       </div>
     </section>
   );

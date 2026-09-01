@@ -47,6 +47,29 @@ export const hero = {
   cta: 'See my work',
 } as const;
 
+/** Hero side panel — an abstraction of the kind of app he builds, not a photo. */
+export const buildPanel = {
+  label: 'Web app',
+  bars: [0.26, 0.44, 0.32, 0.6, 0.48, 0.8, 0.66, 1],
+  accentBars: [5, 7],
+  rows: [
+    { key: 'Access', value: 'RBAC' },
+    { key: 'Accessibility', value: 'WCAG 2.1 AA' },
+    { key: 'API layer', value: '.NET REST' },
+  ],
+  footer: '10+ apps shipped · 5 countries',
+} as const;
+
+/** Sector wall — fills the testimonial row and shows the breadth of the work. */
+export const sectors = [
+  { name: 'Fintech', detail: 'Wallets & currency' },
+  { name: 'Healthcare', detail: 'Records & intake' },
+  { name: 'Government', detail: 'Pension services' },
+  { name: 'Telecom', detail: 'Self-service apps' },
+  { name: 'Logistics', detail: 'Shipping & freight' },
+  { name: 'Inventory', detail: 'Warehouse suites' },
+];
+
 export const marqueeText =
   'SAAS WEB APPS — HEALTHCARE APPS — DIGITAL WALLET & CURRENCY APPS — GOVERNMENT & PENSION APPS — MOBILE NETWORK PROVIDER APPS — INVENTORY SYSTEMS — SHIPPING & LOGISTICS APPS — ';
 
