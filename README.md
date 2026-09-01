@@ -76,8 +76,30 @@ required, valid email, project message at least 20 characters.
 
 ## Deploy
 
-Pushing to `main` runs `.github/workflows/deploy.yml`, which builds and publishes `dist/` with
-`actions/deploy-pages`. Repo **Settings → Pages → Source** must be set to **GitHub Actions**.
+The site is live at <https://waqas-amin.github.io/>, served from the **`gh-pages`** branch
+(**Settings → Pages → Source: Deploy from a branch**). To publish a change:
+
+```bash
+npm run deploy
+```
+
+That builds `dist/`, adds `.nojekyll`, and force-pushes the result to `gh-pages`.
+
+### Switching to the GitHub Actions workflow
+
+`.github/workflows/deploy.yml` is written and ready but **not committed** — pushing a workflow
+file needs the `workflow` OAuth scope, which the local `gh` login does not have. To switch over:
+
+```bash
+gh auth refresh -h github.com -s workflow
+```
+
+```bash
+git add .github && git commit -m "Add GitHub Pages deploy workflow" && git push
+```
+
+Then set **Settings → Pages → Source** to **GitHub Actions**. After that every push to `main`
+builds and deploys, and `npm run deploy` is no longer needed.
 
 ### Adding the custom domain
 
