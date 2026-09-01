@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Waqas Amin — SaaS &amp; enterprise web app developer</title>
+    <meta
+      name="description"
+      content="Freelance frontend engineer. Five-plus years and 10+ production apps in Angular, React and TypeScript — multi-tenant SaaS platforms, healthcare and clinical systems, digital wallets, government pension services, inventory, shipping and network-provider apps."
+    />
+    <meta name="theme-color" content="#f3f2f2" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://waqas-amin.github.io/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Waqas Amin — SaaS &amp; enterprise web app developer" />
+    <meta
+      property="og:description"
+      content="Angular, React and TypeScript. 10+ production apps in fintech, healthcare, government and SaaS."
+    />
+    <meta property="og:url" content="https://waqas-amin.github.io/" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&display=swap"
+    />
+
+    <script>
+      // Paint the stored theme before first paint so there is no flash.
+      (function () {
+        try {
+          var stored = localStorage.getItem('wa-theme');
+          var dark =
+            stored === 'dark' ||
+            (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+          if (dark) document.documentElement.style.backgroundColor = '#201e1d';
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
