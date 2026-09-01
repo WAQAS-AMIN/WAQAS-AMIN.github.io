@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Waqas Amin</title>
+    <script>
+      // GitHub Pages has no server-side rewrites: stash the requested route and
+      // hand it back to the SPA router from index.html.
+      (function () {
+        try {
+          sessionStorage.setItem(
+            'wa-redirect',
+            location.pathname + location.search + location.hash
+          );
+        } catch (e) {}
+        location.replace(location.origin + '/');
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
